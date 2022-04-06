@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --primaryColor: #4267b2;
+  --gifContainer: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.gif__form {
+  padding: 16px;
+  max-width: 496px;
+  margin: auto;
+  margin-top: 36px;
+  border: 1px solid #333;
+}
+.gif__form textarea {
+  width: 100%;
+  height: 100px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  resize: none;
+}
+.tag__btn--grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
+}
+.tag__btn--grid button {
+  border-radius: 40px;
+  border: none;
+  padding: 16px;
+  text-align: left;
+  cursor: pointer;
+}
+.gif__relative {
+  position: relative;
+}
+.gif__container {
+  width: 300px;
+  background-color: var(--gifContainer);
+  position: absolute;
+  top: 140%;
+  padding: 16px 8px;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.4);
+  border: 1px solid #333;
+}
+.gif__container::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-color: var(--gifContainer);
+  top: -10px;
+  left: 10%;
+  transform: rotate(45deg);
+  border-top: 1px solid #333;
+  border-left: 1px solid #333;
+}
+.gif__input {
+  width: 100%;
+  padding: 4px 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.gif {
+  margin-top: 12px;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.gif > img {
+  width: 100%;
 }
